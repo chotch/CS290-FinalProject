@@ -1,0 +1,443 @@
+[
+  {
+    "type": "chest" ,
+    "reps": "6-8",
+    "url": "https://cdn2.coachmag.co.uk/sites/coachmag/files/2017/05/bench-press_0.jpg",
+    "description": "bench press",
+    "difficulty": 3
+  },
+  {
+    "type": "chest",
+    "reps": "8-10",
+    "url": "http://fitnessjockey.com/wp-content/uploads/2017/05/dumbbell-bench-press.jpg",
+    "description": "dumbell bench press",
+    "difficulty": 4
+  },
+  {
+    "type": "chest",
+    "reps": "6-8",
+    "url": "https://www.gymsource.com/media/prod.image/c/y/cyb-fw-olympicinclineprs-1_2.jpg",
+    "description": "incline bench press",
+    "difficulty": 4
+  },
+  {
+    "type": "chest",
+    "reps": "8-10",
+    "url": ,
+    "description": "incline dumbell bench press",
+    "difficulty": 4
+  },
+  {
+    "type": "chest",
+    "reps": "10-12",
+    "url": "http://seannal.com/images/cable-crossover.jpg",
+    "description": "cable flys",
+    "difficulty": 2
+  },
+  {
+    "type": "chest",
+    "reps": "10-12",
+    "url": ,
+    "description": "dumbell flys",
+    "difficulty": 5
+  },
+  {
+    "type": "chest",
+    "reps": "10-15",
+    "url": ,
+    "description": "regular pushups",
+    "difficulty": 1
+  },
+  {
+    "type": "chest",
+    "reps": "10-15",
+    "url": ,
+    "description": "diamond pushups",
+    "difficulty": 4
+  },
+  {
+    "type": "chest",
+    "reps": "10",
+    "url": ,
+    "description": "machine bench press",
+    "difficulty": 2
+  },
+  {
+    "type": "back",
+    "reps": "10-12",
+    "url": ,
+    "description": "pullups",
+    "difficulty": 4
+  },
+  {
+    "type": "back",
+    "reps": "10-12",
+    "url": ,
+    "description": "chinups",
+    "difficulty": 4
+  },
+  {
+    "type": "back",
+    "reps": "8-10",
+    "url": ,
+    "description": "lat pulldowns",
+    "difficulty": 2
+  },
+  {
+    "type": "back",
+    "reps": "10-12",
+    "url": ,
+    "description": "one-hand lat pulldowns",
+    "difficulty": 2
+  },
+  {
+    "type": "back",
+    "reps": "8-10",
+    "url": ,
+    "description": "cable rows",
+    "difficulty": 3
+  },
+  {
+    "type": "back",
+    "reps": "6-8",
+    "url": ,
+    "description": "barbell bent over rows",
+    "difficulty": 4
+  },
+  {
+    "type": "back",
+    "reps": "8-10",
+    "url": ,
+    "description": "one hand dumbell rows",
+    "difficulty": 3
+  },
+  {
+    "type": "back",
+    "reps": "10-12",
+    "url": ,
+    "description": "machine rows",
+    "difficulty": 2
+  },
+  {
+    "type": "back",
+    "reps": "10-12",
+    "url": ,
+    "description": "close grip lat pulldowns",
+    "difficulty": 4
+  },
+  {
+    "type": "shoulders",
+    "reps": "6-8",
+    "url": ,
+    "description": "standing barbell shoulder press",
+    "difficulty": 5
+  },
+  {
+    "type": "shoulders",
+    "reps": "8-10",
+    "url": ,
+    "description": "seated dumbell shoulder press",
+    "difficulty": 4
+  },
+  {
+    "type": "shoulders",
+    "reps": "8-10",
+    "url": ,
+    "description": "machine shoulder press",
+    "difficulty": 2
+  },
+  {
+    "type": "shoulders",
+    "reps": "10-12",
+    "url": ,
+    "description": "dumbell lateral raises",
+    "difficulty": 4
+  },
+  {
+    "type": "shoulders",
+    "reps": "10-12",
+    "url": ,
+    "description": "dumbell front raises",
+    "difficulty": 3
+  },
+  {
+    "type": "shoulders",
+    "reps": "10-12",
+    "url": ,
+    "description": "barbell front raises",
+    "difficulty": 4
+  },
+  {
+    "type": "shoulders",
+    "reps": "8-10",
+    "url": ,
+    "description": "dumbell shoulder shrugs",
+    "difficulty": 3
+  },
+  {
+    "type": "shoulders",
+    "reps": "8-10",
+    "url": ,
+    "description": "barbell shoulder shrugs",
+    "difficulty": 3
+  },
+  {
+    "type": "shoulders",
+    "reps": "10-12",
+    "url": ,
+    "description": "face pulls",
+    "difficulty": 3
+  },
+  {
+    "type": "back",
+    "reps": "6-8",
+    "url": ,
+    "description": "bent over t-bar rows",
+    "difficulty": 4
+  },
+  {
+    "type": "biceps",
+    "reps": "8-10",
+    "url": ,
+    "description": "barbell curls",
+    "difficulty": 4
+  },
+  {
+    "type": "biceps",
+    "reps": "10-12",
+    "url": ,
+    "description": "dumbell hammer curls",
+    "difficulty": 2
+  },
+  {
+    "type": "biceps",
+    "reps": "10-12",
+    "url": ,
+    "description": "dumbell concentration curls" ,
+    "difficulty": 4
+  },
+  {
+    "type": "biceps",
+    "reps": "10-15",
+    "url": ,
+    "description": "reverse grip cable curls",
+    "difficulty": 4
+  },
+  {
+    "type": "biceps",
+    "reps": "10-12",
+    "url": ,
+    "description": "cable curls",
+    "difficulty": 2
+  },
+  {
+    "type": "biceps",
+    "reps": "10-15",
+    "url": ,
+    "description": "rope cable curls",
+    "difficulty": 3
+  },
+  {
+    "type": "biceps",
+    "reps": "8-10",
+    "url": ,
+    "description": "machine preacher curls",
+    "difficulty": 4
+  },
+  {
+    "type": "biceps",
+    "reps": "10-12",
+    "url": ,
+    "description": "alternating dumbell curls",
+    "difficulty": 2
+  },
+  {
+    "type": "triceps",
+    "reps": "10-12",
+    "url": ,
+    "description": "single arm reverse pushdowns",
+    "difficulty": 4
+  },
+  {
+    "type": "triceps",
+    "reps": "8-10",
+    "url": ,
+    "description": "cable pushdowns",
+    "difficulty": 2
+  },
+  {
+    "type": "triceps",
+    "reps": "10-12",
+    "url": ,
+    "description": "rope cable pushdowns",
+    "difficulty": 3
+  },
+  {
+    "type": "triceps",
+    "reps": "10-15",
+    "url": ,
+    "description": "dips",
+    "difficulty": 4
+  },
+  {
+    "type": "triceps",
+    "reps": "10-12",
+    "url": ,
+    "description": "overhead dumbell extensions",
+    "difficulty": 4
+  },
+  {
+    "type": "triceps",
+    "reps": "8-10",
+    "url": ,
+    "description": "overhead barbell extensions",
+    "difficulty": 4
+  },
+  {
+    "type": "triceps",
+    "reps": "10-12",
+    "url": ,
+    "description": "dumbell kick backs",
+    "difficulty": 3
+  },
+  {
+    "type": "triceps",
+    "reps": "8-10",
+    "url": ,
+    "description": "close grip bench press",
+    "difficulty": 4
+  },
+  {
+    "type": "legs",
+    "reps": "6-8",
+    "url": ,
+    "description": "barbell squats",
+    "difficulty": 4
+  },
+  {
+    "type": "legs",
+    "reps": "4-6",
+    "url": ,
+    "description": "barbell deadlifts",
+    "difficulty": 4
+  },
+  {
+    "type": "legs",
+    "reps": "8-10",
+    "url": ,
+    "description": "machine leg press",
+    "difficulty": 2
+  },
+  {
+    "type": "legs",
+    "reps": "8-12",
+    "url": ,
+    "description": "dumbell straight leg deadlifts",
+    "difficulty": 3
+  },
+  {
+    "type": "legs",
+    "reps": "15-20",
+    "url": ,
+    "description": "standing calf raises",
+    "difficulty": 1
+  },
+  {
+    "type": "legs",
+    "reps": "15-20",
+    "url": ,
+    "description": "weighted standing calf raises",
+    "difficulty": 3
+  },
+  {
+    "type": "legs",
+    "reps": "8-10",
+    "url": ,
+    "description": "goblet squat",
+    "difficulty": 4
+  },
+  {
+    "type": "legs",
+    "reps": "10-12",
+    "url": ,
+    "description": "machine hamstring curls",
+    "difficulty": 2
+  },
+  {
+    "type": "legs",
+    "reps": "10-12",
+    "url": ,
+    "description": "machine quad extensions",
+    "difficulty": 2
+  },
+  {
+    "type": "legs",
+    "reps": "10-12",
+    "url": ,
+    "description": "weighted walking lunges",
+    "difficulty": 4
+  },
+  {
+    "type": "core",
+    "reps": "20-30",
+    "url": ,
+    "description": "situps",
+    "difficulty": 1
+  },
+  {
+    "type": "core",
+    "reps": "10-15",
+    "url": ,
+    "description": "hanging leg raises",
+    "difficulty": 4
+  },
+  {
+    "type": "core",
+    "reps": "15-20",
+    "url": ,
+    "description": "lying leg raises",
+    "difficulty": 3
+  },
+  {
+    "type": "core",
+    "reps": "20-30",
+    "url": ,
+    "description": "russian twists",
+    "difficulty": 2
+  },
+  {
+    "type": "core",
+    "reps": "50-75",
+    "url": ,
+    "description": "flutter kicks",
+    "difficulty": 2
+  },
+  {
+    "type": "core",
+    "reps": "15-20",
+    "url": ,
+    "description": "jackknife crunch",
+    "difficulty": 4
+  },
+  {
+    "type": "core",
+    "reps": "15-20",
+    "url": ,
+    "description": "bicycle crunch",
+    "difficulty": 3
+  },
+  {
+    "type": "core",
+    "reps": "20-30",
+    "url": ,
+    "description": "abs machine",
+    "difficulty": 2
+  },
+  {
+    "type": "none",
+    "reps": "none",
+    "url": ,
+    "description": "rest day",
+    "difficulty": 0
+  }
+]
