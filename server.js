@@ -17,6 +17,11 @@ app.get('/', function (req, res){
     exercises: exerciseData
   });
 
+app.get("favicon.ico", function(req, res\)
+{
+  res.status(200)       //send? "https://thumbs.dreamstime.com/z/cartoon-bodybuilder-flexing-illustration-47713844.jpg"
+  res.end();
+});
   console.log('rendering view template');
 });
 
