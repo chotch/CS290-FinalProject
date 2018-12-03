@@ -5,21 +5,28 @@ var exphbs = require('express-handlebars');
 var app = express();
 var port = 3000;
 
+// import JSON data (ie. exercise objects)
 var exerciseData = require('./exerciseData');
 
+// register `express-handlebars` with Express as a template engine
+//  main' is derived from the name of our layout template file, `views/layouts/main.handlebars`
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+// tell Express to use `express-handlebars` by default every time
 app.set('view engine', 'handlebars');
 
 
 
+// serve the homepage (ie. homePage.handlebars)
 app.get('/', function (req, res){
   res.render('homePage', {
+    // pass in the context object containing our exercise data
     exercises: exerciseData
   });
 
   console.log('rendering view template');
 });
 
+// Serve any files matching those in the "./public" directory
 app.use(express.static('public'));
 
 app.listen(port, function (){
