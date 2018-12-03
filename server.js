@@ -16,7 +16,11 @@ app.get('/', function (req, res){
   res.render('homePage', {
     exercises: exerciseData
   });
-
+app.get('/favicon.ico', function(req, res)
+{
+  app.status(200);
+  app.end();
+});
   console.log('rendering view template');
 });
 
