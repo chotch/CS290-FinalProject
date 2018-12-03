@@ -23,10 +23,153 @@ header a {
   color:#fff;
 }
 
+.myPlan-container h1 {
+  margin: 0;
+}
+
+
 .site-title {
   font-family: "Roboto Slab", serif;
   font-size: 80px;
   font-weight: 100;
   margin: 0 0 0 20px;
   padding-top:30px;
+  color: #ffcc99
+}
+
+.content {
+  display: flex;
+}
+
+.filter-container{
+  min-width: 200px;
+  max-width: 200px;
+  margin: 10px 10px auto 10px;
+  padding: 20px;
+  border-radius: 3px;
+  background-color: #ffb266;
+}
+
+.filter-container h2 {
+  margin: 0;
+}
+
+.filter-input-container {
+  width: 100%;
+  margin: 20px 0;
+  align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+.filter-input {
+  font-size: 14px;
+  flex: 1 auto;
+  width: 33%;
+  margin-left: 10px;
+  padding: 3px;
+  border: 1px solid #dadada;
+  border-radius: 3px;
+}
+
+.filter-fieldset {
+  flex: 1 100%;
+  border: 1px solid #ababab;
+}
+
+.hidden {
+  display: none;
+}
+
+.action-button {
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+  background-color: #000;
+  border: 1px solid #ababab;
+  border-radius: 5px;
+  font-weight: lighter;
+  cursor: pointer;
+}
+
+.action-button:hover{
+  background-color: #ff8000;
+  border-color: #333;
+  color: #333;
+}
+
+#filter-find-button {
+  width: 100%;
+}
+
+.exercise {
+  display: inline-block;
+  vertical-align: top;
+  height: 340px;
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #dadada;
+  border-radius: 3px;
+}
+
+.exercise-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.exercise-image-container img {
+  padding-top: 20px;
+  max-height: 220px;
+  max-width: 300px;
+}
+
+.exercise-title-container{
+  width: 100%;
+  margin-top: 5px;
+}
+
+.exercise-title {
+
+  font-size: 23px;
+  color: black;
+}
+
+.buttons-container {
+  display: inline-block;
+  font-size: 80%;
+  padding: 3px;
+  margin: 3px 5px;
+  border: 1px solid #ababab;
+  border-radius: 3px;
+
+}
+
+#add-exercise-button {
+  position: fixed;
+  bottom: 25px;
+  right: 550px;
+  height: 80px;
+  width: 800px;
+  border-radius: 33px;
+  font-size: 40px;
+}
+
+#viewPlan-button {
+  position: fixed;
+  right: 10px;
+  top: 150px;
+  height: 250px;
+  width: 250px;
+  border: none;
+  border-radius: 30px;
+  font-size: 40px;
+  background-color: #ffb266;
+  color: black;
+  cursor: pointer;
+  /* display:flex; */
+  display:inline-block;
 }

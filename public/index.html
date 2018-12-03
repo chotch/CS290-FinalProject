@@ -10,20 +10,23 @@
     <!-- This 3rd party stylesheet incorporates SVG icons from Font Awesome: http://fontawesome.com/ -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
     <header>
-      <div class="header-image">
+      <!-- <div class="header-image">
         <img src="https://newfieldpress.org/wp-content/uploads/2017/11/hull-gym-weights.jpg" alt="site logo">
-      </div>
+      </div> -->
       <h1 class="site-title">Creating Your Own Workout</h1>
     </header>
 
     <main class="content">
+
+
+
       <aside class="filter-container">
-        <h2> Filters </h2>
+        <h2> Narrow your search! </h2>
 
         <div class="filter-input-container">
           <label for="filter-text" class="filter-input-label"> Text </label>
@@ -46,6 +49,10 @@
         <div class="filter-input-container">
           <fieldset id="filter-difficulty" class="filter-fieldset">
             <legend>Difficulty</legend>
+            <div>
+              <input type="checkbox" name="filter-difficulty" id="filter-difficulty-0" value="0">
+              <label for="filter-difficulty-0">0</label>
+            </div>
             <div>
               <input type="checkbox" name="filter-difficulty" id="filter-difficulty-1" value="1">
               <label for="filter-difficulty-1">1</label>
@@ -73,6 +80,8 @@
         <button id="filter-find-button" class="action-button">Find</button>
 
       </aside>
+
+
 
       <section id="exercises">
 
@@ -137,7 +146,10 @@
 
       </main>
 
-      <button type="button" id="add-exercise-button"><i class="fa fa-plus"</i></button>
+      <button type="button" id="viewPlan-button">View My Plan</button>
+
+      <button type="button" id="add-exercise-button" class="action-button">Add an exercise to My Plan</button>
+
 
       <div id="modal-add-backdrop" class="hidden"></div>
       <div id="add-modal" class="hidden">
@@ -155,6 +167,12 @@
               <label for="exercise-text-input">Exercise</label>
               <input type="text" id="exercise-text-input"></input>
             </div>
+
+            <div class="exercise-add-element">
+              <label for="exercise-sets-input">Sets</label>
+              <input type="text" id="exercise-sets-input"></input>
+            </div>
+
 
             <div class="exercise-add-element">
               <label for="exercise-reps-input">Reps</label>
@@ -185,5 +203,122 @@
 
         </div>
       </div>
+
+      <div id="myPlan-modal-backdrop" class="hidden"></div>
+      <div id="myPlan-modal" class="hidden">
+        <div class="myPlan-modal-dialog">
+
+          <div class="myPlan-modal-header">
+
+        <h1>My Plan</h1>
+        <button type="button" id="myPlan-modal-close" class="myPlan-modal-hide-button">&times;</button>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="day-container">
+          <h4> Monday </h4>
+          <div class="myExercises-container">
+
+          </div>
+          <div class="mySets-container">
+
+          </div>
+
+          <div class="myReps-container">
+
+          </div>
+        </div>
+
+        <div class="day-container">
+          <h4> Tuesday </h4>
+          <div class="myExercises-container">
+
+          </div>
+          <div class="mySets-container">
+
+          </div>
+
+          <div class="myReps-container">
+
+          </div>
+        </div>
+
+        <div class="day-container">
+          <h4> Wednesday </h4>
+          <div class="myExercises-container">
+
+          </div>
+          <div class="mySets-container">
+
+          </div>
+
+          <div class="myReps-container">
+
+          </div>
+        </div>
+
+        <div class="day-container">
+          <h4> Thursday </h4>
+          <div class="myExercises-container">
+
+          </div>
+          <div class="mySets-container">
+
+          </div>
+
+          <div class="myReps-container">
+
+          </div>
+        </div>
+
+        <div class="day-container">
+          <h4> Friday </h4>
+          <div class="myExercises-container">
+
+          </div>
+          <div class="mySets-container">
+
+          </div>
+
+          <div class="myReps-container">
+
+          </div>
+        </div>
+
+        <div class="day-container">
+          <h4> Saturday </h4>
+          <div class="myExercises-container">
+
+          </div>
+          <div class="mySets-container">
+
+          </div>
+
+          <div class="myReps-container">
+
+          </div>
+        </div>
+
+        <div class="day-container">
+          <h4> Sunday </h4>
+          <div class="myExercises-container">
+
+          </div>
+          <div class="mySets-container">
+
+          </div>
+
+          <div class="myReps-container">
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
     </body>
   </html>
