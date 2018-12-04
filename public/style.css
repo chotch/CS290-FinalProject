@@ -176,7 +176,7 @@ header a {
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.85);
  }
-		
+
 #add-modal {
   position: fixed;
   top: 0;
@@ -209,4 +209,19 @@ header a {
   display: block;
   /* display:flex; */
   /* float: right; */
+}
+
+.error-block {
+  text-align: center;
+}
+
+.error-block h1 {
+  font-size: 136px;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+.error-block h2 {
+  font-size: 32px;
+  margin: 0;
 }
