@@ -8,9 +8,9 @@ a {
   color: #f67811;
 }
 
-a:hover{
+/* a:hover{
   text-decoration: underline;
-}
+} */
 
 header {
   background-color: #000;
