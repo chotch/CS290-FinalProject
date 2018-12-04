@@ -7,6 +7,7 @@ var port = 3000;
 
 // import JSON data (ie. exercise objects)
 var exerciseData = require('./exerciseData');
+var myPlanData = require('./myPlanData');
 
 // register `express-handlebars` with Express as a template engine
 //  main' is derived from the name of our layout template file, `views/layouts/main.handlebars`
@@ -29,6 +30,15 @@ app.get('/', function (req, res) {
   res.render('homePage', {
     // pass in the context object containing our exercise data
     exercises: exerciseData
+  });
+});
+
+// serve the My Plan (ie. homePage.handlebars)
+app.get('/my-workout-plan', function (req, res) {
+  res.render('planPage', {  // planPage.handlebars, feed it json data
+    // pass in the context object containing the user's exercise plan
+    //    see: myPlanData.json, dayMyPlan.handlebars, and exercise.handlebars
+    days: myPlanData
   });
 });
 
