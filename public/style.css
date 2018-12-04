@@ -151,12 +151,20 @@ header a {
 
 #add-exercise-button {
   position: fixed;
-  bottom: 25px;
-  right: 550px;
   height: 80px;
-  width: 800px;
-  border-radius: 33px;
+  width: 60%;
+  border-radius: 20px;
   font-size: 40px;
+  bottom: 10px;
+
+  /* center horizontally */
+  margin: 1% auto; /* Will not center vertically and won't work in IE6/7. */
+  left: 0;
+  right: 0;
+
+  /* prevent button text from wrapping when screen width is small */
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 /* .viewPlanContainer {
