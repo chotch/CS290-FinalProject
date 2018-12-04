@@ -167,6 +167,26 @@ header a {
   overflow: hidden;
 }
 
+#modal-add-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.85);
+ }
+		
+#add-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1010;
+  overflow: scroll;
+ }
+
 /* .viewPlanContainer {
   display:inline-block;
   position: fixed;
