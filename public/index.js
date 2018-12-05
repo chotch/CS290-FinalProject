@@ -22,6 +22,34 @@ modalClose.addEventListener('click', function(event){
   addExerciseModal.classList.toggle('hidden');
 });
 
+var modalExercise = document.getElementById('exercise-text-input');
+var modalSets = document.getElementById('exercise-sets-input');
+var modalReps = document.getElementById('exercise-reps-input');
+var mon = document.getElementById('monday');
+var tues = document.getElementById('tuesday');
+var wed = document.getElementById('wednesday');
+var thur = document.getElementById('thursday');
+var fri = document.getElementById('friday');
+var sat = document.getElementById('saturday');
+var sun = document.getElementById('sunday');
+
+var modalConfirm = document.getElementById('modal-accept');
+modalConfirm.addEventListener('click', function (event){
+  if (modalExercise.value.length !== 0 && modalSets.value.length !== 0 && modalReps.value.length !== 0){
+
+    //grab the info inputted by the user. and output the data to myPlanData.json so that
+    //the new exercise is loaded into the page planPage
+
+    addExerciseModalBackdrop.classList.toggle('hidden');
+    addExerciseModal.classList.toggle('hidden');
+
+
+  }
+  else {
+    alert('You must fill in all the required fields');
+  }
+})
+
 var addModalOpen = document.getElementById('add-exercise-button');
 var modal = document.getElementById('add-modal');
 var modalBackdrop = document.getElementById('modal-add-backdrop');
