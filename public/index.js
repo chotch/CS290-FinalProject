@@ -79,3 +79,141 @@ for(var i = 0; i < infoButton.length; i++)
     infoButton[i].addEventListener('click', infoModalOpen)
   }
 }
+
+// var exerciseInfoButton = document.getEement
+//CHRISTIEN WORKING ON FILTER FUNCTIONALITY
+
+
+
+var filterText = document.getElementById('filter-text');
+var filterType = document.getElementById('filter-type');
+var filterDifficulty0 = document.getElementById('filter-difficulty-0');
+var filterDifficulty1 = document.getElementById('filter-difficulty-1');
+var filterDifficulty2 = document.getElementById('filter-difficulty-2');
+var filterDifficulty3 = document.getElementById('filter-difficulty-3');
+var filterDifficulty4 = document.getElementById('filter-difficulty-4');
+var filterDifficulty5 = document.getElementById('filter-difficulty-5');
+
+filterText.addEventListener('change', function (event){
+  var userFilterText = event.target.value;
+});
+
+filterType.addEventListener('change', function (event){
+  var userFilterType = event.target.value;
+});
+
+filterDifficulty0.addEventListener('click', function (event){
+  filterDifficulty0.classList.toggle('checked');
+});
+
+filterDifficulty1.addEventListener('click', function (event){
+  filterDifficulty1.classList.toggle('checked');
+});
+
+filterDifficulty2.addEventListener('click', function (event){
+  filterDifficulty2.classList.toggle('checked');
+});
+
+filterDifficulty3.addEventListener('click', function (event){
+  filterDifficulty3.classList.toggle('checked');
+});
+
+filterDifficulty4.addEventListener('click', function (event){
+  filterDifficulty4.classList.toggle('checked');
+});
+
+filterDifficulty5.addEventListener('click', function (event){
+  filterDifficulty5.classList.toggle('checked');
+  console.log('5 is checked');
+});
+
+var findButton = document.getElementById('filter-find-button');
+findButton.addEventListener('click', function (event){
+  var exercises = document.getElementsByClassName('exercise-contents');
+
+  var exercisesInfo = document.getElementsByClassName('exercise-title-container');
+
+  var i;
+  var j;
+
+  for (i = 0; i<exercisesInfo.length; i++){
+    for (j = 0; j<62; j++){
+      var exerciseTitle = ((document.getElementsByClassName('exercise-title'))[i].textContent);
+      // var exerciseType = ((document.))
+
+      var filterTextValue = filterText.value.toUpperCase();
+      exerciseTitle = exerciseTitle.toUpperCase();
+
+      var includes = exerciseTitle.includes(filterTextValue);
+
+      //filter description works!!
+      if (!includes && filterText.value.length !== 0){
+        exercises[i].parentNode.remove();
+      }
+
+      var exerciseDifficulty = exercises[i].parentNode.getAttribute('data-difficulty');
+
+
+      if (filterDifficulty0.classList.contains('checked')){
+        if (exerciseDifficulty !== '0'){
+          exercises[i].parentNode.remove();
+        }
+      }
+
+      if (filterDifficulty1.classList.contains('checked')){
+        if (exerciseDifficulty !== '1'){
+          exercises[i].parentNode.remove();
+        }
+      }
+
+      if (filterDifficulty2.classList.contains('checked')){
+        if (exerciseDifficulty !== '2'){
+          exercises[i].parentNode.remove();
+        }
+      }
+
+      if (filterDifficulty3.classList.contains('checked')){
+        if (exerciseDifficulty !== '3'){
+          exercises[i].parentNode.remove();
+        }
+      }
+
+      if (filterDifficulty4.classList.contains('checked')){
+        if (exerciseDifficulty !== '4'){
+          exercises[i].parentNode.remove();
+        }
+      }
+
+      if (filterDifficulty5.classList.contains('checked')){
+        if (exerciseDifficulty !== '5'){
+          exercises[i].parentNode.remove();
+        }
+      }
+
+      //filter by difficulty works
+
+      var exerciseType = exercises[i].parentNode.getAttribute('data-type');
+
+
+      if (filterType.value === 'Arms'){
+        if (exerciseType !== 'biceps' && exerciseType !== 'triceps'){
+          exercises[i].parentNode.remove();
+        }
+      }
+      else {
+        if((exerciseType !== filterType.value.toLowerCase()) && filterType.value.length !== 0){
+          exercises[i].parentNode.remove();
+        }
+      }
+
+      //filter by type works
+
+
+
+
+
+
+    }
+  }
+
+});
