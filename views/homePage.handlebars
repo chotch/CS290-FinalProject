@@ -105,17 +105,40 @@
 
 
             <div class="exercise-add-element">
-              <label for="add-exercise-day"> Day </label>
-              <select id="add-exercise-day" class="add-day" name="add-day">
-                <option selected value="">Any</option>
-                <option>Monday</option>
-                <option>Tuesday</option>
-                <option>Wednesday</option>
-                <option>Thursday</option>
-                <option>Friday</option>
-                <option>Saturday</option>
-                <option>Sunday</option>
-              </select>
+              <fieldset id="exercise-day-fieldset" class="exercise-fieldset">
+                <legend>Day</legend>
+                <div>
+                  <input type="radio" name="exercise-day" id="monday" value="monday" checked>
+                  <label for="monday">Monday</label>
+                </div>
+                <div>
+                  <input type="radio" name="exercise-day" id="tuesday" value="tuesday">
+                  <label for="tuesday">Tuesday</label>
+                </div>
+                <div>
+                  <input type="radio" name="exercise-day" id="wednesday" value="wednesday">
+                  <label for="wednesday">Wednesday</label>
+                </div>
+                <div>
+                  <input type="radio" name="exercise-day" id="thursday" value="thursday">
+                  <label for="thursday">Thursday</label>
+                </div>
+                <div>
+                  <input type="radio" name="exercise-day" id="friday" value="friday">
+                  <label for="friday">Friday</label>
+                </div>
+                <div>
+                  <input type="radio" name="exercise-day" id="saturday" value="saturday">
+                  <label for="saturday">Saturday</label>
+                </div>
+                <div>
+                  <input type="radio" name="exercise-day" id="sunday" value="sunday">
+                  <label for="sunday">Sunday</label>
+                </div>
+              </fieldset>
+
+
+
             </div>
 
           </div>
