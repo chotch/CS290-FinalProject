@@ -1,22 +1,22 @@
 [
   {
     "dayOfWeek": "Sunday",
-    "exercises": [
-      {
-        "type": "chest",
-        "reps": "6-8",
-        "url": "https://cdn2.coachmag.co.uk/sites/coachmag/files/2017/05/bench-press_0.jpg",
-        "description": "bench press",
-        "difficulty": 3
-      },
-      {
-        "type": "chest",
-        "reps": "8-10",
-        "url": "http://fitnessjockey.com/wp-content/uploads/2017/05/dumbbell-bench-press.jpg",
-        "description": "dumbell bench press",
-        "difficulty": 4
-      }
-    ]
+      "exercises": [
+        {
+          "type": "chest",
+          "reps": "6-8",
+          "url": "https://cdn2.coachmag.co.uk/sites/coachmag/files/2017/05/bench-press_0.jpg",
+          "description": "bench press",
+          "difficulty": 3
+        },
+        {
+          "type": "chest",
+          "reps": "8-10",
+          "url": "http://fitnessjockey.com/wp-content/uploads/2017/05/dumbbell-bench-press.jpg",
+          "description": "dumbell bench press",
+          "difficulty": 4
+        }
+      ]
   },
   {
     "dayOfWeek": "Monday",
