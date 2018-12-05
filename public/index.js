@@ -49,12 +49,15 @@ function getModalInfo(){
     }
     console.log(customExercise);
 
-    return customExercise;
-}
-function addExercise(customExercise){
-  
+    exercise = customExercise;
 
+    //var exerciseHtml = Handlebars.templates.customExercise(customExercise);
+    //console.log(exerciseHtml);
+
+    //var customExerciseContainer = document.getElementById('exercises');
+    //customExerciseContainer.insertAdjacentHTML('beforeend', exerciseHtml);
 }
+
 
 var modalConfirm = document.getElementById('modal-accept');
 modalConfirm.addEventListener('click', function (event){
@@ -64,6 +67,7 @@ modalConfirm.addEventListener('click', function (event){
     //the new exercise is loaded into the page planPage
 
     getModalInfo();
+    insertNewExercise(exercise);
 
     addExerciseModalBackdrop.classList.toggle('hidden');
     addExerciseModal.classList.toggle('hidden');
