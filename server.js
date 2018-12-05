@@ -57,6 +57,28 @@ app.get('/my-workout-plan', function (req, res) {
   });
 });
 
+//To display/read individual days, needs fixing
+app.get('/my-workout-plan/:dayOfWeek', function(req, res, next){
+  var dayOfWeek = req.params.dayOfWeek.toLowerCase();
+  if (myPlanData[dayOfWeek]){
+    res.status(200).render('planPage', myPlanData[dayOfWeek]);
+  }
+  else{
+    next();
+  }
+});
+
+//app.post('/my-workout-plan/addExercise', function(req, res){
+//  if (myPlanData[])
+
+//});
+
+function storeExerciseInDB(){
+  var request = new XMLHttpRequest();
+  var requestURL = '/my-workout-plan/' + dayOfWeek + '/addExercise';
+  request.open('POST', requestURL);
+}
+
 // silence "couldn't find favicon.ico" error
 app.get('/favicon.ico', function (req, res) {
   res.status(200);
