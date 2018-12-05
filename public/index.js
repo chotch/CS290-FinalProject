@@ -33,6 +33,29 @@ var fri = document.getElementById('friday');
 var sat = document.getElementById('saturday');
 var sun = document.getElementById('sunday');
 
+var newExercises = [];
+
+function getModalInfo(){
+    var description = document.getElementById('exercise-text-input').value.trim();
+    var sets = document.getElementById('exercise-sets-input').value.trim();
+    var reps = document.getElementById('exercise-reps-input').value.trim();
+    var day = document.querySelector('#exercise-day-fieldset input:checked').value;
+
+    var customExercise = {
+      sets: sets,
+      reps: reps,
+      description: description,
+      day: day
+    }
+    console.log(customExercise);
+
+    return customExercise;
+}
+function addExercise(customExercise){
+  
+
+}
+
 var modalConfirm = document.getElementById('modal-accept');
 modalConfirm.addEventListener('click', function (event){
   if (modalExercise.value.length !== 0 && modalSets.value.length !== 0 && modalReps.value.length !== 0){
@@ -40,9 +63,10 @@ modalConfirm.addEventListener('click', function (event){
     //grab the info inputted by the user. and output the data to myPlanData.json so that
     //the new exercise is loaded into the page planPage
 
+    getModalInfo();
+
     addExerciseModalBackdrop.classList.toggle('hidden');
     addExerciseModal.classList.toggle('hidden');
-
 
   }
   else {
