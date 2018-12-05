@@ -59,8 +59,8 @@ app.get('/my-workout-plan', function (req, res) {
 
 // silence "couldn't find favicon.ico" error
 app.get('/favicon.ico', function (req, res) {
-  app.status(200);
-  app.end();
+  res.status(200);
+  res.end();
 });
 
 // serve any files matching those in the "./public" directory
