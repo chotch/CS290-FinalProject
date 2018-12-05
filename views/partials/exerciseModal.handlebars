@@ -1,32 +1,30 @@
 <div class="modal-dialog">
 
   <div class="modal-header">
-    <h3>Add an axercise to your plan!</h3>
+    <h3>Add an exercise to your plan!</h3>
     <button type="button" id="modal-close" class="modal-hide-button">&times;</button>
   </div>
 
 
   <div class="modal-add-body">
 
-    <div class="exercise-add-element">
-      <label for="exercise-text-input">Exercise</label>
-      <input type="text" id="exercise-text-input"></input>
+    <div class="exercise-container">
+      <h4 class="modal-title">Exercise</h4>
+      <p type="text" id="exercise-value">"dumbells"</p>
     </div>
 
-    <div class="exercise-add-element">
+    <div>
       <label for="exercise-sets-input">Sets</label>
       <input type="text" id="exercise-sets-input"></input>
     </div>
 
-
-    <div class="exercise-add-element">
-      <label for="exercise-reps-input">Reps</label>
-      <input type="text" id="exercise-reps-input"></input>
+    <div class="reps-container">
+      <h4 class="modal-title">Reps</h4>
+      <p type="text" id="modal-value">6</p>
     </div>
 
-
-    <div class="exercise-add-element">
-      <label for="add-exercise-day"> Day </label>
+    <div class="day-container">
+      <label for="day-label"> Day </label>
       <select id="add-exercise-day" class="add-day" name="add-day">
         <option selected value="">Any</option>
         <option>Monday</option>
