@@ -30,6 +30,14 @@ function modalAccept() {
   console.log("modalAccept!");
 }
 
+function modalClose() {
+  /* 
+  This function closes the modal dialog when "X" button is pressed
+  */
+  console.log("modalClose!");
+  modalCancel();
+}
+
 function updateExercises() {
   //remove elements in the DOM that do not fit the filter
   console.log("updateExercises!");
@@ -54,7 +62,8 @@ var oButtonIdsFunctions = {
   'add-exercise-button': addExercise,
   'modal-cancel': modalCancel,
   'modal-accept': modalAccept,
-  'viewPlan-button': viewPlan
+  'viewPlan-button': viewPlan,
+  'modal-close': modalClose
 };
 
 // assign a button click function (ie. a property in oButtonIdsFunctions object)
