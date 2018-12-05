@@ -298,7 +298,6 @@ function viewPlan() {
 //    to HTML button element id's (ie. object keys)
 var oButtonIdsFunctions = {
   'filter-find-button': doFilterUpdate,
-  'info-exercise-button': showExerciseInfo,
   'add-exercise-button': addExercise,
   'modal-cancel': modalCancel,
   'modal-accept': modalAccept,
