@@ -77,55 +77,7 @@
 
       <div id="modal-add-backdrop" class="hidden"></div>
       <div id="add-modal" class="hidden">
-        <div class="modal-dialog">
-
-          <div class="modal-header">
-            <h3>Add an axercise to your plan!</h3>
-            <button type="button" id="modal-close" class="modal-hide-button">&times;</button>
-          </div>
-
-
-          <div class="modal-add-body">
-
-            <div class="exercise-add-element">
-              <label for="exercise-text-input">Exercise</label>
-              <input type="text" id="exercise-text-input"></input>
-            </div>
-
-            <div class="exercise-add-element">
-              <label for="exercise-sets-input">Sets</label>
-              <input type="text" id="exercise-sets-input"></input>
-            </div>
-
-
-            <div class="exercise-add-element">
-              <label for="exercise-reps-input">Reps</label>
-              <input type="text" id="exercise-reps-input"></input>
-            </div>
-
-
-            <div class="exercise-add-element">
-              <label for="add-exercise-day"> Day </label>
-              <select id="add-exercise-day" class="add-day" name="add-day">
-                <option selected value="">Any</option>
-                <option>Monday</option>
-                <option>Tuesday</option>
-                <option>Wednesday</option>
-                <option>Thursday</option>
-                <option>Friday</option>
-                <option>Saturday</option>
-                <option>Sunday</option>
-              </select>
-            </div>
-
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" id="modal-cancel" class="modal-hide-button action-button">Cancel</button>
-            <button type="button" id="modal-accept" class="action-button">Add Exercise</button>
-          </div>
-
-        </div>
+        {{> exerciseModal}}
       </div>
 
   </div>
