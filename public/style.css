@@ -195,20 +195,34 @@ header a {
   height: 5000px;
 } */
 #viewPlan-button {
-  position: fixed;
-  right: 10px;
-  top: 150px;
-  height: 150px;
-  width: 150px;
-  border: none;
-  border-radius: 30px;
-  font-size: 40px;
+  position: absolute;
+  top: 655px;
+  width: 240px;
+  height: 100px;
+  margin: 10px 10px auto 10px;
+  padding: 20px;
   background-color: #ffb266;
+  border-radius: 3px;
+  border: 1px solid #ababab;
+  font-size: 28px;
   color: black;
   cursor: pointer;
-  display: block;
-  /* display:flex; */
-  /* float: right; */
+}
+
+#viewPlan-button:hover{
+  border: 1px solid black;
+}
+
+#add-exercise-button {
+  position: absolute;
+  top: 550px;
+  width: 240px;
+  margin: 10px 10px auto 10px;
+  padding: 20px;
+  border-radius: 3px;
+  background-color: #ffb266;
+  color: black;
+  font-size:16px;
 }
 
 /*
