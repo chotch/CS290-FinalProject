@@ -1,6 +1,7 @@
 var addModalOpen = document.getElementById('add-exercise-button');
 var modal = document.getElementById('add-modal');
 var modalBackdrop = document.getElementById('modal-add-backdrop');
+var allExercises = []
 
 function addExercise() {
 /*
@@ -43,6 +44,169 @@ function updateExercises() {
   console.log("updateExercises!");
 }
 
+/*
+ * This function parses an existing DOM element representing a single exercise
+ * into an object representing that exercise and returns that object.  The object
+ * is structured like this:
+ *
+ * {
+ *   description: "...",
+ *   photoURL: "...",
+ *   price: ...,
+ *   city: "...",
+ *   condition: "..."
+ * }
+ */
+function parseExerciseElem(exerciseElem) {
+  console.log('parsing exercise elem...');
+  // console.log(exerciseElem);
+  
+  var exercise = {
+    type: exerciseElem.getAttribute('data-type'),
+    difficulty: exerciseElem.getAttribute('data-difficulty'),
+    reps: exerciseElem.getAttribute('data-reps')
+  };
+
+  var postImageElem = exerciseElem.querySelector('.exercise-image-container img');
+  exercise.photoURL = postImageElem.src;
+  exercise.description = postImageElem.alt;
+  
+  console.log('returning exercise...');
+  // console.log(exercise);
+  return exercise;
+}
+
+/*
+ * Wait until the DOM content is loaded, and then hook up UI interactions, etc.
+ */
+window.addEventListener('DOMContentLoaded', function () {
+
+  /*
+   * Remember all of the initial post elements initially displayed in the page.
+   */
+  var exerciseElems = document.getElementsByClassName('exercise');
+  for (var i = 0; i < exerciseElems.length; i++) {
+    allExercises.push(parseExerciseElem(exerciseElems[i]));
+  }
+});
+
+
+// this function will insert a new Exercise to the end of the exercises section
+function insertNewExercise(exercise) {
+  console.log('adding new exercise...');
+  console.log(exercise);
+  var newExerciseHTML = Handlebars.templates.exercise({
+    "description": exercise.description,
+    "url": exercise.photoURL,
+    "type": exercise.type,
+    "difficulty": exercise.difficulty,
+    "reps": exercise.reps
+  });
+  
+  console.log('exercise HTML:');
+  console.log(newExerciseHTML);
+
+  /*
+   * Add the new post element into the DOM at the end of the posts <section>.
+   */
+  var exercisesSection = document.getElementById('exercises');
+  exercisesSection.insertAdjacentHTML('beforeend', newExerciseHTML);
+}
+
+/*
+ * Applies the filters currently entered by the user to the set of all posts.
+ * Any post that satisfies the user's filter values will be displayed,
+ * including posts that are not currently being displayed because they didn't
+ * satisfy an old set of filters.  Posts that don't satisfy the filters are
+ * removed from the DOM.
+ */
+function doFilterUpdate() {
+  console.log('doFilterUpdate()!');
+  /*
+   * Grab values of filters from user inputs.
+   */
+  var filters = {
+    text: document.getElementById('filter-text').value.trim(),
+    type: document.getElementById('filter-type').value,
+    difficulties: []
+  }
+  
+  console.log('filters after getting type and text:');
+  console.log(filters);
+
+  var filterDifficultyCheckedInputs = document.querySelectorAll("#filter-difficulty input:checked");
+  for (var i = 0; i < filterDifficultyCheckedInputs.length; i++) {
+    filters.difficulties.push(filterDifficultyCheckedInputs[i].value);
+  }
+
+  console.log('filters after getting difficulties:');
+  console.log(filters);
+  /*
+   * Remove all "post" elements from the DOM.
+   */
+  console.log('removing all exercises...');
+  var exerciseContainer = document.getElementById('exercises');
+  while (exerciseContainer.lastChild) {
+    exerciseContainer.removeChild(exerciseContainer.lastChild);
+  }
+
+  /*
+   * Loop through the collection of all "post" elements and re-insert ones
+   * that meet the current filtering criteria.
+   */
+  console.log('adding new exercises...');
+  allExercises.forEach(function (exercise) {
+    if (exercisePassesFilters(exercise, filters)) {
+      console.log("exercise vars = ", exercise);
+      insertNewExercise(exercise);
+    }
+  });
+  
+  // if no exercises after filtering, show message
+  if (!exerciseContainer.lastChild) {
+    var exerciseContainer = document.getElementById('exercises');
+    var h3 = document.createElement('h3');
+    
+    h3.innerHTML = "No exercises matching this criteria! Refresh page to view all.";
+    exerciseContainer.appendChild(h3);
+  }
+}
+
+/*
+ * A function to apply the current filters to a specific post.  Returns true
+ * if the post passes the filters and should be displayed and false otherwise.
+ */
+function exercisePassesFilters(exercise, filters) {
+  console.log('testing if exercise passes filters...');
+  console.log('exercise:');
+  console.log(exercise);
+  console.log('filters:');
+  console.log(filters);
+  
+  if (filters.text) {
+    var exerciseDescription = exercise.description.toLowerCase();
+    var filterText = filters.text.toLowerCase();
+    if (exerciseDescription.indexOf(filterText) === -1) {
+      return false;
+    }
+  }
+
+  if (filters.type) {
+    if (exercise.type.toLowerCase() !== filters.type.toLowerCase()) {
+      return false;
+    }
+  }
+
+  if (filters.difficulties && filters.difficulties.length > 0) {
+    if (filters.difficulties.indexOf(exercise.difficulty) === -1) {
+      return false;
+    }
+  }
+
+  return true;
+  
+}
+
 function showExerciseInfo() {
   //unhide modal and display info of exercise (including difficulty and reps)
   console.log("showExerciseInfo!");
@@ -57,7 +221,7 @@ function viewPlan() {
 // maps JS functions (ie. object properties)
 //    to HTML button element id's (ie. object keys)
 var oButtonIdsFunctions = {
-  'filter-find-button': updateExercises,
+  'filter-find-button': doFilterUpdate,
   'info-exercise-button': showExerciseInfo,
   'add-exercise-button': addExercise,
   'modal-cancel': modalCancel,
