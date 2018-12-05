@@ -2,32 +2,35 @@ var addModalOpen = document.getElementById('add-exercise-button');
 var modal = document.getElementById('add-modal');
 var modalBackdrop = document.getElementById('modal-add-backdrop');
 
-function addExercise() {
+function infoModalOpen() {
 /*
  * This function shows the "add exercise" modal by removing the "hidden"
  * class from the modal and backdrop.
  */
-  console.log("addExercise!");
   modal.classList.remove('hidden');
   modalBackdrop.classList.remove('hidden');
   console.log('== modal opened');
 }
 
-function modalCancel() {
-  /* 
+function modalClose() {
+  /*
   This function closes the modal dialog when "cancel" is pressed
   */
-  console.log("modalCancel!");
   modal.classList.add('hidden');
   modalBackdrop.classList.add('hidden');
   console.log('== modal closed');
 }
 
 function modalAccept() {
-    /* 
+    /*
   This function submits the modal when the "accept" button is pressed
   */
-  console.log("modalAccept!");
+  var exercise = document.getElementById('exercise-text-input').text;
+  var reps = document.getElementById('exercise-reps-input').text;
+  var sets = document.getElementById('exercise-sets-input').text;
+  var dayDropdown = document.getElementById('add-exercise-day')
+  var day = dayDropdown.options[dayDropdown.selectedIndex].text;
+    console.log(exercise + reps + sets + day);
 }
 
 function updateExercises() {
@@ -50,9 +53,8 @@ function viewPlan() {
 //    to HTML button element id's (ie. object keys)
 var oButtonIdsFunctions = {
   'filter-find-button': updateExercises,
-  'info-exercise-button': showExerciseInfo,
-  'add-exercise-button': addExercise,
-  'modal-cancel': modalCancel,
+  'modal-cancel': modalClose,
+  'modal-close': modalClose,
   'modal-accept': modalAccept,
   'viewPlan-button': viewPlan
 };
@@ -60,7 +62,7 @@ var oButtonIdsFunctions = {
 // assign a button click function (ie. a property in oButtonIdsFunctions object)
 //    to each button (ie. key in oButtonIdsFunctions)
 for (var thisButtonID in oButtonIdsFunctions) {
-  // check key is actual property of object 
+  // check key is actual property of object
   //    (ie. skip JS object prototypes, only process ones we added above)
   if (oButtonIdsFunctions.hasOwnProperty(thisButtonID)) {
     var thisButton = document.getElementById(thisButtonID);
@@ -69,3 +71,11 @@ for (var thisButtonID in oButtonIdsFunctions) {
   }
 }
 
+var infoButton = document.getElementsByClassName('exercise-info-button');
+for(var i = 0; i < infoButton.length; i++)
+{
+  if(infoButton[i])
+  {
+    infoButton[i].addEventListener('click', infoModalOpen)
+  }
+}

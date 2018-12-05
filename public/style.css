@@ -181,10 +181,39 @@ header a {
   position: fixed;
   top: 0;
   bottom: 0;
-  left: 0;
+  left: 40%;
   right: 0;
   z-index: 1010;
   overflow: scroll;
+ }
+
+ .modal-header {
+   position: relative;
+   padding: 15px;
+   padding-left: 150px;
+   display: inline-block;
+
+ }
+
+ .modal-add-body {
+   padding-left: 150px;
+ }
+
+ .hidden {
+   display: none;
+ }
+
+ .modal-dialog {
+   width: auto;
+   width: 600px;
+   min-height: 300px;
+   margin: 50px auto;
+   background-color: white;
+   border-radius: 25px;
+ }
+
+ .modal-footer {
+   padding-left: 150px;
  }
 
 /* .viewPlanContainer {
