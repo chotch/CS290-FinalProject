@@ -42,7 +42,7 @@ app.listen(port, function () {
 
 // serve the homepage (ie. homePage.handlebars)
 app.get('/', function (req, res) {
-  res.render('homePage', {
+  res.status(200).render('homePage', {
     // pass in the context object containing our exercise data
     exercises: exerciseData
   });
@@ -50,7 +50,7 @@ app.get('/', function (req, res) {
 
 // serve the My Plan (ie. homePage.handlebars)
 app.get('/my-workout-plan', function (req, res) {
-  res.render('planPage', {  // planPage.handlebars, feed it json data
+  res.status(200).render('planPage', {  // planPage.handlebars, feed it json data
     // pass in the context object containing the user's exercise plan
     //    see: myPlanData.json, dayMyPlan.handlebars, and exercise.handlebars
     days: myPlanData
@@ -59,8 +59,7 @@ app.get('/my-workout-plan', function (req, res) {
 
 // silence "couldn't find favicon.ico" error
 app.get('/favicon.ico', function (req, res) {
-  app.status(200);
-  app.end();
+  res.status(200);
 });
 
 // serve any files matching those in the "./public" directory
