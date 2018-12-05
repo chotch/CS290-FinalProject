@@ -1,3 +1,16 @@
+//making the modal that pops up window to show exercise title, reps, difficulty
+var addExerciseModalButton = document.getElementById('add-exercise-button');
+
+
+addExerciseModalButton.addEventListener('click', function (event){
+  console.log('in function');
+  addExerciseModalBackdrop = document.getElementById('modal-add-backdrop');
+  addExerciseModalBackdrop.classList.toggle('hidden');
+  addExerciseModal = document.getElementById('add-modal');
+  addExerciseModal.classList.toggle('hidden');
+
+});
+
 var addModalOpen = document.getElementById('add-exercise-button');
 var modal = document.getElementById('add-modal');
 var modalBackdrop = document.getElementById('modal-add-backdrop');
@@ -15,7 +28,7 @@ function addExercise() {
 }
 
 function modalCancel() {
-  /* 
+  /*
   This function closes the modal dialog when "cancel" is pressed
   */
   console.log("modalCancel!");
@@ -25,14 +38,14 @@ function modalCancel() {
 }
 
 function modalAccept() {
-    /* 
+    /*
   This function submits the modal when the "accept" button is pressed
   */
   console.log("modalAccept!");
 }
 
 function modalClose() {
-  /* 
+  /*
   This function closes the modal dialog when "X" button is pressed
   */
   console.log("modalClose!");
@@ -60,7 +73,7 @@ function updateExercises() {
 function parseExerciseElem(exerciseElem) {
   console.log('parsing exercise elem...');
   // console.log(exerciseElem);
-  
+
   var exercise = {
     type: exerciseElem.getAttribute('data-type'),
     difficulty: exerciseElem.getAttribute('data-difficulty'),
@@ -70,7 +83,7 @@ function parseExerciseElem(exerciseElem) {
   var postImageElem = exerciseElem.querySelector('.exercise-image-container img');
   exercise.photoURL = postImageElem.src;
   exercise.description = postImageElem.alt;
-  
+
   console.log('returning exercise...');
   // console.log(exercise);
   return exercise;
@@ -102,7 +115,7 @@ function insertNewExercise(exercise) {
     "difficulty": exercise.difficulty,
     "reps": exercise.reps
   });
-  
+
   console.log('exercise HTML:');
   console.log(newExerciseHTML);
 
@@ -130,7 +143,7 @@ function doFilterUpdate() {
     type: document.getElementById('filter-type').value,
     difficulties: []
   }
-  
+
   console.log('filters after getting type and text:');
   console.log(filters);
 
@@ -161,12 +174,12 @@ function doFilterUpdate() {
       insertNewExercise(exercise);
     }
   });
-  
+
   // if no exercises after filtering, show message
   if (!exerciseContainer.lastChild) {
     var exerciseContainer = document.getElementById('exercises');
     var h3 = document.createElement('h3');
-    
+
     h3.innerHTML = "No exercises matching this criteria! Refresh page to view all.";
     exerciseContainer.appendChild(h3);
   }
@@ -182,7 +195,7 @@ function exercisePassesFilters(exercise, filters) {
   console.log(exercise);
   console.log('filters:');
   console.log(filters);
-  
+
   if (filters.text) {
     var exerciseDescription = exercise.description.toLowerCase();
     var filterText = filters.text.toLowerCase();
@@ -204,7 +217,7 @@ function exercisePassesFilters(exercise, filters) {
   }
 
   return true;
-  
+
 }
 
 function showExerciseInfo() {
@@ -233,7 +246,7 @@ var oButtonIdsFunctions = {
 // assign a button click function (ie. a property in oButtonIdsFunctions object)
 //    to each button (ie. key in oButtonIdsFunctions)
 for (var thisButtonID in oButtonIdsFunctions) {
-  // check key is actual property of object 
+  // check key is actual property of object
   //    (ie. skip JS object prototypes, only process ones we added above)
   if (oButtonIdsFunctions.hasOwnProperty(thisButtonID)) {
     var thisButton = document.getElementById(thisButtonID);
@@ -241,4 +254,3 @@ for (var thisButtonID in oButtonIdsFunctions) {
     thisButton.addEventListener('click', thisFunction);
   }
 }
-

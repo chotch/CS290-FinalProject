@@ -371,3 +371,9 @@ header a {
 #modal-cancel:hover{
   background-color: #eee;
 }
+
+.exercise-info-container {
+  font-size: 16px;
+  display: inline-block;
+  font-weight: bold;
+}
