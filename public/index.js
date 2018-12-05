@@ -1,14 +1,25 @@
 //making the modal that pops up window to show exercise title, reps, difficulty
 var addExerciseModalButton = document.getElementById('add-exercise-button');
-
+addExerciseModal = document.getElementById('add-modal');
+addExerciseModalBackdrop = document.getElementById('modal-add-backdrop');
 
 addExerciseModalButton.addEventListener('click', function (event){
   console.log('in function');
-  addExerciseModalBackdrop = document.getElementById('modal-add-backdrop');
   addExerciseModalBackdrop.classList.toggle('hidden');
-  addExerciseModal = document.getElementById('add-modal');
   addExerciseModal.classList.toggle('hidden');
 
+});
+
+var modalExit = document.getElementById('modal-close');
+modalExit.addEventListener('click', function (event){
+  addExerciseModalBackdrop.classList.toggle('hidden');
+  addExerciseModal.classList.toggle('hidden');
+});
+
+var modalClose = document.getElementById('modal-cancel');
+modalClose.addEventListener('click', function(event){
+  addExerciseModalBackdrop.classList.toggle('hidden');
+  addExerciseModal.classList.toggle('hidden');
 });
 
 var addModalOpen = document.getElementById('add-exercise-button');
